@@ -1,0 +1,28 @@
+{
+  "name": "delivery-platform",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Delivery platform monorepo",
+  "packageManager": "pnpm@12.9.1",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "format": "prettier --write .",
+    "db:generate": "pnpm --filter @delivery/database generate",
+    "db:migrate": "pnpm --filter @delivery/database migrate",
+    "db:deploy": "pnpm --filter @delivery/database deploy",
+    "db:studio": "pnpm --filter @delivery/database studio",
+    "db:seed": "pnpm --filter @delivery/database seed"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3"
+  }
+}
